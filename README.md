@@ -25,7 +25,6 @@ Before diving into technical details, it may be important to start by defining t
 
 By this, we can reasonably conclude that the Product Manager and Business Analyst will have bi-weekly meetings to review progress on the consumer journey analysis and assess the effectiveness of implemented strategies.
 
-<br><br>
 ## 🛠️ Defining Technical Architecture
 
 To store event data in the data warehouse and analyze events such as successful payments, barcode scans, or items added to the cart, we need to prepare the facts and questions to guide the technical architecture decisions.
@@ -77,7 +76,6 @@ Sample of event message:
 | Payment page message         | [JSON](messages/payment_page_message.json)    |
 | Confirmation page message    | [JSON](messages/confirmation_page_message.json)    |
 
-<br><br>
 ## 📝 Explanation of Architecture
 
 Main goal of this architecture is to create a data product driven by service its originated from. In this architecture, I’m choosing scenario in which each service is managed by separate team. Backend team will be responsible for owning service and publishing message to Kafka Broker. Ownership of Kafka Broker can be hand overed to SRE team or Data Engineering team. Data engineer will own all consumer service for every Kafka topic. The consumer services will store the event logs to AWS S3 grouped by origin of service. From here, we can either do ELT by utilising Snowflake’s external table feature + DBT or ETL by creating transformation process between S3 and Snowflake.
