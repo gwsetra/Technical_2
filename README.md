@@ -53,7 +53,7 @@ End-to-end Diagram
 </p>
 
 <p align="center">
-  <em>Figure 1: Description of the image</em>
+  <em>Figure 1: End-to-end diagram</em>
 </p>
 
 
@@ -66,8 +66,15 @@ User Action Diagram
   <em>Figure 2: User Action diagram</em>
 </p>
 
-**
+
 Sample of event message
+| **Item**       | **JSON File**                               |
+|----------------|---------------------------------------------|
+| Product page message         | [JSON](product_page_message.json)    |
+| Cart page message            | [JSON](cart_page_message.json)    |
+| Payment page message         | [JSON](payment_page_message.json)    |
+| Confirmation page message    | [JSON](confirmation_page_message.json)    |
+
 
 ## Explanation of Architecture
 
