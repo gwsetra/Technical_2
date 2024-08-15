@@ -48,7 +48,44 @@ For this scenario, let’s assume Kafka is the event streaming platform, Snowfla
 
 ## Architecture Diagram
 End-to-end Diagram
-User Action Diagram![image](https://github.com/user-attachments/assets/a21b8197-f3f3-4900-a4a7-b861355c8eeb)
-Sample of event message![image](https://github.com/user-attachments/assets/8e3d5c40-c000-4776-9f7e-bd4b6633c129)
+User Action Diagram
+Sample of event message
+
+## Explanation of Architecture
+
+Main goal of this architecture is to create a data product driven by service its originated from. In this architecture, I’m choosing scenario in which each service is managed by separate team. Backend team will be responsible for owning service and publishing message to Kafka Broker. Ownership of Kafka Broker can be hand overed to SRE team or Data Engineering team. Data engineer will own all consumer service for every Kafka topic. The consumer services will store the event logs to AWS S3 grouped by origin of service. From here, we can either do ELT by utilising Snowflake’s external table feature + DBT or ETL by creating transformation process between S3 and Snowflake.
+
+My opinion on why this architecture is preferred, I wanted to minimise unnecessary data transformation further from data warehouse. Unnecessary transformation might add maintenance cost to the team in the long run. I tried to keep data flowing from source unprocessed up to data lake. By creating topic for separate service also increase ease of maintenance and helps system scale in case of peaks in user traffic. S3 as data lake are preferred to store raw log events due to relatively lower cost (vs other solutions) and strong integration with Snowflake. Separating S3 buckets based on the origin of the service also helps in managing data governance, especially concerning PII. Specific policies can be implemented for each bucket.
+
+This design will also address how to retrieve new data about a past event, particularly if the field was already tracked and published by the producer before the business requirement emerged, and no transformation or filtering occurred between Kafka, the consumer, and the S3 bucket. The necessary information can be brought from S3 to the data warehouse using either Snowflake external storage or Spark.
+
+
+## Advantage & Disadvantage
+### Advantage
+
+1. **Scalability:**
+   - Each domain service operates independently, allowing for horizontal scaling. As traffic increases, individual services can be scaled without impacting others.
+   - Decoupled domain services communicating via Kafka topics reduce dependencies between services, making it easier to modify or replace individual components without affecting the entire system.
+   - Each domain service having its own Kafka topic and consumer pipeline simplifies troubleshooting and allows teams to focus on domain-specific improvements without needing to understand the entire system.
+
+2. **Improved Fault Tolerance:**
+   - With each domain service writing to its own Kafka topic, failures in one service do not directly impact others. Kafka's built-in durability and replication features also enhance system resilience.
+
+3. **Flexibility in Data Storage:**
+   - Domain-specific S3 buckets allow services to store data in a manner tailored to their needs, facilitating optimized storage strategies and easier data retrieval.
+
+4. **Enhanced Data Governance and Compliance:**
+   - By isolating data flows within specific Kafka topics and S3 buckets, it becomes easier to enforce data governance policies. Domain-specific storage can ensure that compliance requirements are met more efficiently, as data can be managed and audited on a per-domain basis.
+
+### Disadvantage
+
+1. **Increased Complexity:**
+   - Managing multiple Kafka topics, consumers, and domain-specific S3 buckets increases system complexity. This requires more sophisticated monitoring, logging, and debugging tools.
+
+2. **Data Stored in Silos:**
+   - With data stored in domain-specific S3 buckets, there is a risk of creating data silos. Aggregating and analyzing data across domains may become more challenging, requiring additional ETL processes or data pipelines.
+
+3. **Higher Costs:**
+   - Running a robust Kafka infrastructure, along with managing multiple S3 buckets for different domains, can be costly in terms of both operational expenses and cloud storage fees.
 
 
