@@ -1,8 +1,8 @@
 ## 📘 Introduction
 
-Before diving into the technical details, it is important to first establish the broader context and express my personal approach of this problem. While there are various technical solutions available, including business requirements into the technical design ensures that engineers can deliver the greatest value with maximum efficiency. 
+This page outlines the approach I'll take to address the challenge of storing events from our backend into the data warehouse. While there are many technical solutions available from a data engineering perspective, they can be inefficient if business requirements aren't fully understood. Therefore, my approach prioritizes understanding business needs first, ensuring the technical design is aligned to deliver maximum value and efficiency.
 
-Chapter 1 will begin by defining "hypothetical scenario" from our business users. Then in chapter 2, we will unpack the business requirement from business users from technical perspective. Chapter 3 will present diagrams of the proposed solutions. Finally, Chapters 4 and 5 will offer detailed answers and comparison related to these solutions.
+The approach will be explained across five chapters. Chapter 1 will start by defining a "hypothetical scenario" based on our business users' needs. In Chapter 2, I will analyze the business requirements from a technical perspective. Chapter 3 will present architecture diagrams of the proposed solutions, which will be further elaborated in Chapter 4. Finally, Chapter 5 will explain the reasoning behind the chosen solution.
 
 ## 📋 Table of Contents
 
@@ -50,7 +50,7 @@ To store event data in the data warehouse and analyze events such as successful 
 8. What is the data retention policy, and does it involve PII data?
 9. How proficient is the team in using the tools and technologies in use?
 
-For this scenario, let’s assume Kafka is the event streaming platform, Snowflake is used for the data warehouse, Amazon S3 is used for the data lake, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
+For this scenario, Setra as System Architect decide to use Kafka as the event streaming platform, Snowflake for the data warehouse, Amazon S3 for the data lake. At the same time, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
 
 ## 🏗️ Architecture Diagram
 End-to-end Diagram:
