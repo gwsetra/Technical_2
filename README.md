@@ -85,7 +85,7 @@ This design will also address how to retrieve new data about a past event, parti
 2. ***Data Stored in Silos:***
    - With data stored in domain-specific S3 buckets, there is a risk of creating data silos. Aggregating and analyzing data across domains may become more challenging, requiring additional ETL processes or data pipelines.
 
-3. **£Higher Costs:***
+3. ***Higher Costs:***
    - Running a robust Kafka infrastructure, along with managing multiple S3 buckets for different domains, can be costly in terms of both operational expenses and cloud storage fees.
 
 
