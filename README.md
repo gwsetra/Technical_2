@@ -46,7 +46,6 @@ To store event data in the data warehouse and analyze events such as successful 
 
 For this scenario, let’s assume Kafka is the event streaming platform, Snowflake is used for the data warehouse, Amazon S3 is used for the data lake, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
 
-<br><br>
 ## 🏗️ Architecture Diagram
 End-to-end Diagram:
 <p align="center">
