@@ -26,7 +26,7 @@ Before diving into technical details, it may be important to start by defining t
 By this, we can reasonably conclude that the Product Manager and Business Analyst will have bi-weekly meetings to review progress on the consumer journey analysis and assess the effectiveness of implemented strategies.
 
 
-## Defining Technical Architecture
+## 🛠️ Defining Technical Architecture
 
 To store event data in the data warehouse and analyze events such as successful payments, barcode scans, or items added to the cart, we need to prepare the facts and questions to guide the technical architecture decisions.
 
