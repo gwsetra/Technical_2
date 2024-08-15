@@ -4,7 +4,7 @@
 2. [Defining Technical Architecture](#-defining-technical-architecture)
 3. [Architecture Diagram](#-architecture-diagram)
 4. [Explanation of Architecture](#-explanation-of-architecture)
-5. [Advantage & Disadvantage](#-advantage--disadvantage)
+5. [Advantage & Disadvantage](#-advantage-and-disadvantage)
 
 
 ## 🎯 Understanding Business Goals and Expectations
@@ -46,7 +46,7 @@ To store event data in the data warehouse and analyze events such as successful 
 
 For this scenario, let’s assume Kafka is the event streaming platform, Snowflake is used for the data warehouse, Amazon S3 is used for the data lake, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
 
-## 🏗️ Architecture Diagram:
+## 🏗️ Architecture Diagram
 End-to-end Diagram:
 <p align="center">
   <img src="end-to-end-diagram.png" alt="end-to-end-diagram" />
@@ -85,7 +85,7 @@ My opinion on why this architecture is preferred, I wanted to minimise unnecessa
 This design will also address how to retrieve new data about a past event, particularly if the field was already tracked and published by the producer before the business requirement emerged, and no transformation or filtering occurred between Kafka, the consumer, and the S3 bucket. The necessary information can be brought from S3 to the data warehouse using either Snowflake external storage or Spark.
 
 
-## ⚖️ Advantage & Disadvantage
+## ⚖️ Advantage and Disadvantage
 ### Advantage
 
 1. **Scalability:**
