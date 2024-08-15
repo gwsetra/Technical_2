@@ -70,10 +70,10 @@ User Action Diagram
 Sample of event message
 | **Item**       | **JSON File**                               |
 |----------------|---------------------------------------------|
-| Product page message         | [JSON](product_page_message.json)    |
-| Cart page message            | [JSON](cart_page_message.json)    |
-| Payment page message         | [JSON](payment_page_message.json)    |
-| Confirmation page message    | [JSON](confirmation_page_message.json)    |
+| Product page message         | [JSON](messages/product_page_message.json)    |
+| Cart page message            | [JSON](messages/cart_page_message.json)    |
+| Payment page message         | [JSON](messages/payment_page_message.json)    |
+| Confirmation page message    | [JSON](messages/confirmation_page_message.json)    |
 
 
 ## Explanation of Architecture
