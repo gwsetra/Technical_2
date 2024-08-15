@@ -90,12 +90,12 @@ This design will also address how to retrieve new data about a past event, parti
 ### Advantage
 
 1. **Scalability:**
-   - Each domain service operates independently, allowing for horizontal scaling. As traffic increases, individual services can be scaled without impacting others.
-   - Decoupled domain services communicating via Kafka topics reduce dependencies between services, making it easier to modify or replace individual components without affecting the entire system.
-   - Each domain service having its own Kafka topic and consumer pipeline simplifies troubleshooting and allows teams to focus on domain-specific improvements without needing to understand the entire system.
+   - Each service operates independently, allowing for horizontal scaling. As traffic increases, individual services can be scaled without impacting others.
+   - Decoupled services communicating via Kafka topics reduce dependencies between services, making it easier to modify or replace individual components without affecting the entire system.
+   - Each service having its own Kafka topic and consumer pipeline simplifies troubleshooting and allows teams to focus on domain-specific improvements without needing to understand the entire system.
 
 2. **Improved Fault Tolerance:**
-   - With each domain service writing to its own Kafka topic, failures in one service do not directly impact others. Kafka's built-in durability and replication features also enhance system resilience.
+   - With each service writing to its own Kafka topic, failures in one service do not directly impact others. Kafka's built-in durability and replication features also enhance system resilience.
 
 3. **Flexibility in Data Storage:**
    - Domain-specific S3 buckets allow services to store data in a manner tailored to their needs, facilitating optimized storage strategies and easier data retrieval.
