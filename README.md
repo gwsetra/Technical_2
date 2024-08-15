@@ -61,7 +61,6 @@ User Action Diagram:
 <p align="center">
   <img src="UserActionDiagram.png" alt="user action diagram" />
 </p>
-
 <p align="center">
   <em>Figure 2: User Action diagram</em>
 </p>
