@@ -1,10 +1,10 @@
 ## 📋 Table of Contents
 
 1. [Understanding Business Goals and Expectations](#-understanding-business-goals-and-expectations)
-2. [Defining Technical Architecture](#defining-technical-architecture)
-3. [Architecture Diagram](#-architecture-diagram)
+2. [Defining Technical Architecture](#%EF%B8%8F-defining-technical-architecture)
+3. [Architecture Diagram](#%EF%B8%8F-architecture-diagram) 
 4. [Explanation of Architecture](#-explanation-of-architecture)
-5. [Advantage & Disadvantage](#-advantage-and-disadvantage)
+5. [Advantage & Disadvantage](#%EF%B8%8F-advantage-and-disadvantagee)
 
 
 ## 🎯 Understanding Business Goals and Expectations
