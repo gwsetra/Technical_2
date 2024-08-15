@@ -1,0 +1,29 @@
+{
+    "eventType": "AddToCartClicked",
+    "timestamp": "2024-08-14T14:00:00Z",
+    "userId": "789456",
+    "sessionId": "18474813-3844-2485-3714-84204857",
+    "items": [
+        {
+            "itemType": "EntryTicket",
+            "itemId": "74274193-3484-3291-9483-237459299",
+            "itemName": "Manchester City Stadium Tour",
+            "ticketDate": "2024-09-06T10:00:00",
+            "adultTickets": {
+                "quantity": 2,
+                "price": 30.00,
+                "currency": "GBP",
+                "discountedPrice": 30.00,
+                "adultTotalLoyaltyPoints": 1000
+            },
+            "childrenTickets": {},
+            "elderlyTickets": {},
+            "specialDiscountTickets": {}
+        }
+    ],
+    "deviceDetails": {
+        "deviceType": "Desktop",
+        "operatingSystem": "Windows 10",
+        "browser": "Chrome"
+    }
+}
