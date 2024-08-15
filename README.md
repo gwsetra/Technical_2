@@ -48,7 +48,13 @@ For this scenario, let’s assume Kafka is the event streaming platform, Snowfla
 
 ## Architecture Diagram
 End-to-end Diagram
+![end-to-end-diagram](end-to-end-diagram.png)
+
+*Figure 1: End-to-end diagram*
 User Action Diagram
+![user action diagram](UserActionDiagram.png)
+
+*Figure 2: User Action diagram*
 Sample of event message
 
 ## Explanation of Architecture
