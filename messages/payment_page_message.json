@@ -1,0 +1,11 @@
+{
+    "eventType": "ProceedPaymentClicked",
+    "timestamp": "2024-08-14T14:30:00Z",
+    "userId": "789456",
+    "sessionId": "18474813-3844-2485-3714-84204857",
+    "cartId": "2347582-3848-2382-2224-27402848",
+    "paymentId": "48294838-3844-4384-3474-93473923",
+    "totalAmount": 60.00,
+    "currency": "GBP",
+    "paymentMethod": "CreditCard"
+}
