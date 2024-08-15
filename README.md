@@ -9,7 +9,7 @@
 
 ## 🎯 Understanding Business Goals and Expectations
 
-Before diving into technical details, it may be important to start by defining the Business Objective and Key Results (OKRs). Establishing these can guide decisions about technical requirements during the design process. Below is an example of Business OKRs:
+Before diving into technical details, it is important to start by defining the Business Objective and Key Results (OKRs). Establishing these will provide guidance about technical requirements during the design process. Below is an example of Business OKRs:
 
 #### Objective 1: Enhance Understanding of Consumer Behaviour
 - ***Key Result 1:*** Conduct user journey mapping for 80% of app users by the end of Q3.
