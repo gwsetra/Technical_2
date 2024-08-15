@@ -1,13 +1,14 @@
-## Table of Contents
+```markdown
+## 📋 Table of Contents
 
 1. [Understanding Business Goals and Expectations](#understanding-business-goals-and-expectations)
 2. [Defining Technical Architecture](#defining-technical-architecture)
 3. [Architecture Diagram](#architecture-diagram)
 4. [Explanation of Architecture](#explanation-of-architecture)
-5. [Design Advantage & Disadvantage](#design-advantage--disadvantage)
+5. [Advantage & Disadvantage](#advantage--disadvantage)
 
 
-## Understanding Business Goals and Expectations
+## 🎯 Understanding Business Goals and Expectations
 
 Before diving into technical details, it may be important to start by defining the Business Objective and Key Results (OKRs). Establishing these can guide decisions about technical requirements during the design process. Below is an example of Business OKRs:
 
@@ -25,7 +26,7 @@ Before diving into technical details, it may be important to start by defining t
 
 By this, we can reasonably conclude that the Product Manager and Business Analyst will have bi-weekly meetings to review progress on the consumer journey analysis and assess the effectiveness of implemented strategies.
 
-## Defining Technical Architecture
+## 🛠️ Defining Technical Architecture
 
 To store event data in the data warehouse and analyze events such as successful payments, barcode scans, or items added to the cart, we need to prepare the facts and questions to guide the technical architecture decisions.
 
@@ -46,7 +47,7 @@ To store event data in the data warehouse and analyze events such as successful 
 
 For this scenario, let’s assume Kafka is the event streaming platform, Snowflake is used for the data warehouse, Amazon S3 is used for the data lake, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
 
-## Architecture Diagram
+## 🗺️ Architecture Diagram
 End-to-end Diagram
 <p align="center">
   <img src="end-to-end-diagram.png" alt="end-to-end-diagram" />
@@ -76,7 +77,7 @@ Sample of event message
 | Confirmation page message    | [JSON](messages/confirmation_page_message.json)    |
 
 
-## Explanation of Architecture
+## 📝 Explanation of Architecture
 
 Main goal of this architecture is to create a data product driven by service its originated from. In this architecture, I’m choosing scenario in which each service is managed by separate team. Backend team will be responsible for owning service and publishing message to Kafka Broker. Ownership of Kafka Broker can be hand overed to SRE team or Data Engineering team. Data engineer will own all consumer service for every Kafka topic. The consumer services will store the event logs to AWS S3 grouped by origin of service. From here, we can either do ELT by utilising Snowflake’s external table feature + DBT or ETL by creating transformation process between S3 and Snowflake.
 
@@ -85,7 +86,7 @@ My opinion on why this architecture is preferred, I wanted to minimise unnecessa
 This design will also address how to retrieve new data about a past event, particularly if the field was already tracked and published by the producer before the business requirement emerged, and no transformation or filtering occurred between Kafka, the consumer, and the S3 bucket. The necessary information can be brought from S3 to the data warehouse using either Snowflake external storage or Spark.
 
 
-## Advantage & Disadvantage
+## ⚖️ Advantage & Disadvantage
 ### Advantage
 
 1. **Scalability:**
@@ -112,5 +113,4 @@ This design will also address how to retrieve new data about a past event, parti
 
 3. **Higher Costs:**
    - Running a robust Kafka infrastructure, along with managing multiple S3 buckets for different domains, can be costly in terms of both operational expenses and cloud storage fees.
-
-
+```
