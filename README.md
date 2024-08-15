@@ -26,7 +26,7 @@ Before diving into technical details, it may be important to start by defining t
 By this, we can reasonably conclude that the Product Manager and Business Analyst will have bi-weekly meetings to review progress on the consumer journey analysis and assess the effectiveness of implemented strategies.
 
 
-## 🛠️ Defining Technical Architecture
+## 🛠️Defining Technical Architecture
 
 To store event data in the data warehouse and analyze events such as successful payments, barcode scans, or items added to the cart, we need to prepare the facts and questions to guide the technical architecture decisions.
 
@@ -47,7 +47,7 @@ To store event data in the data warehouse and analyze events such as successful 
 
 For this scenario, let’s assume Kafka is the event streaming platform, Snowflake is used for the data warehouse, Amazon S3 is used for the data lake, the backend team has the capacity to create new events for data engineers, PII data is involved, and it is necessary to store the data for up to 2 years. In parallel, based on OKRs and business expectations, we can estimate that real-time data is not required, and batch-processing is adequate to track relevant metrics for the business.
 
-## 🏗️ Architecture Diagram
+## 🏗️Architecture Diagram
 End-to-end Diagram:
 <p align="center">
   <img src="end-to-end-diagram.png" alt="end-to-end-diagram" />
