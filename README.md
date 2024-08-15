@@ -4,7 +4,7 @@
 2. [Defining Technical Architecture](#%EF%B8%8F-defining-technical-architecture)
 3. [Architecture Diagram](#%EF%B8%8F-architecture-diagram) 
 4. [Explanation of Architecture](#-explanation-of-architecture)
-5. [Advantage & Disadvantage](#%EF%B8%8F-advantage-and-disadvantagee)
+5. [Advantage & Disadvantage](#%EF%B8%8F-advantage-and-disadvantage)
 
 
 ## 🎯 Understanding Business Goals and Expectations
