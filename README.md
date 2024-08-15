@@ -77,6 +77,7 @@ Sample of event message:
 | Confirmation page message    | [JSON](messages/confirmation_page_message.json)    |
 
 
+
 ## 📝 Explanation of Architecture
 
 Main goal of this architecture is to create a data product driven by service its originated from. In this architecture, I’m choosing scenario in which each service is managed by separate team. Backend team will be responsible for owning service and publishing message to Kafka Broker. Ownership of Kafka Broker can be hand overed to SRE team or Data Engineering team. Data engineer will own all consumer service for every Kafka topic. The consumer services will store the event logs to AWS S3 grouped by origin of service. From here, we can either do ELT by utilising Snowflake’s external table feature + DBT or ETL by creating transformation process between S3 and Snowflake.
