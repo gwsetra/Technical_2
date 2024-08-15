@@ -119,4 +119,4 @@ This design will also address how to retrieve new data about a past event, parti
 If you have any questions, feedback, or collaboration ideas, feel free to reach out!
 
 - **Email**: [setra.wicana.uk@gmail.com](mailto:setra.wicana.uk@gmail.com).
-- **LinkedIn**: [Setra Genyang Wicana](https://https://www.linkedin.com/in/setragenyangw/).
+- **LinkedIn**: [Setra Genyang Wicana](https://www.linkedin.com/in/setragenyangw/).
