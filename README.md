@@ -31,7 +31,7 @@ To store event data in the data warehouse and analyze events such as successful 
 
 ### Facts:
 1. Event logs are expensive.
-2. Tracking new events or modifying existing events is costly.
+2. Tracking new events or modifying existing events is costly from engineering perspective.
 
 ### Questions:
 1. Has the backend team ever produced events before?
