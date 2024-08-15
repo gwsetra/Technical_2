@@ -1,3 +1,9 @@
+## 📘 Introduction
+
+Before diving into the technical details, it is important to first establish the broader context and my personal approach of this problem. While there are various technical solutions available, including business requirements into the technical design ensures that engineers can deliver the greatest value with maximum efficiency. 
+
+Chapter 1 will begin by defining "hypothetical scenario" from our business users. Then in chapter 2, we will unpack the business requirement from business users from technical perspective. Chapter 3 will present diagrams of the proposed solutions. Finally, Chapters 4 and 5 will offer detailed answers and comparison related to these solutions.
+
 ## 📋 Table of Contents
 
 1. [Understanding Business Goals and Expectations](#-understanding-business-goals-and-expectations)
