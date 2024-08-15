@@ -48,13 +48,25 @@ For this scenario, let’s assume Kafka is the event streaming platform, Snowfla
 
 ## Architecture Diagram
 End-to-end Diagram
-![end-to-end-diagram](end-to-end-diagram.png)
+<p align="center">
+  <img src="end-to-end-diagram.png" alt="end-to-end-diagram" />
+</p>
 
-*Figure 1: End-to-end diagram*
+<p align="center">
+  <em>Figure 1: Description of the image</em>
+</p>
+
+
 User Action Diagram
-![user action diagram](UserActionDiagram.png)
+<p align="center">
+  <img src="UserActionDiagram.png" alt="user action diagram" />
+</p>
 
-*Figure 2: User Action diagram*
+<p align="center">
+  <em>Figure 2: User Action diagram</em>
+</p>
+
+**
 Sample of event message
 
 ## Explanation of Architecture
