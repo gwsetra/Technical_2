@@ -113,3 +113,10 @@ This design will also address how to retrieve new data about a past event, parti
 
 3. **Higher Costs:**
    - Running a robust Kafka infrastructure, along with managing multiple S3 buckets for different domains, can be costly in terms of both operational expenses and cloud storage fees.
+  
+### 🗨️ Contacts
+
+If you have any questions, feedback, or collaboration ideas, feel free to reach out!
+
+- **Email**: [setra.wicana.uk@gmail.com](mailto:setra.wicana.uk@gmail.com).
+- **LinkedIn**: [Setra Genyang Wicana](https://https://www.linkedin.com/in/setragenyangw/).
